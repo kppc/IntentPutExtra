@@ -17,7 +17,13 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         init();
         String data = getIntent().getStringExtra("data");
-        textResult.setText(data);
+        boolean data1 = getIntent().getBooleanExtra("data1", true);
+        if (data1){
+            textResult.setText("1");
+        }else {
+            textResult.setText("2");
+        }
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
